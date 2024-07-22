@@ -17,7 +17,7 @@ const MobileMenu = () => {
       </div>
 
      
-        <div className={`${isOpen ? "absolute z-10 top-[96px] text-md left-0 transition-all duration-300 ease-linear bg-black w-full h-[calc(100vh-96px)] " : "left-[-100%] opacity-0"} `}>
+        <div className={`${isOpen ? "absolute z-10 top-[80px] text-md left-0 transition-all duration-300 ease-linear bg-black w-full h-[calc(100vh-96px)] " : "left-[-100%] opacity-0"} `}>
           {isOpen && (
            <div onClick={() => setIsOpen(false)} className="flex flex-col gap-12 items-center justify-center  h-full">
             <Link href="/">Home</Link>
