@@ -4,7 +4,7 @@
 
 const AboutPage = () => {
   return (
-    <div>AboutPage</div>
+    <div className="relative top-[80px] ">AboutPage</div>
   )
 }
 

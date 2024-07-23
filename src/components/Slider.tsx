@@ -44,8 +44,8 @@ const Slider = () => {
     }, [current]);
 
   return (
-    <div className="h-[calc(100vh-80px)] overflow-hidden relative">
-        <div className="w-max h-full flex transition-all ease-in-out duration-700"
+    <div className=" overflow-hidden relative">
+        <div className="w-max h-[100vh] flex transition-all ease-in-out duration-700"
           style={{transform: `translateX(-${current * 100}vw)` }}
         >
           {Slides.map((slide, index) => (
@@ -57,9 +57,9 @@ const Slider = () => {
               </div>
               {/* TEXT CONTAINER */}
               <div className="text-center py-4 px-4 md:px-6 m-auto absolute left-0 top-0 bottom-0 right-0 z-10 bg-gradient-to-t from-white/90 to-white/10 flex flex-col items-center justify-center gap-2 lg:gap-6 xl:gap-8">
-                <h1 className="text-3xl md:text-5xl lg:text-7xl 2xl:text-10xl font-semibold">{slide.title}</h1>
-                <h2 className=" pb-8 text-lg md:text-xl lg:text-2xl 2xl:text-4xl">{slide.content}</h2>
-                <p className="text-md lg:text-lg 2xl:text-xl">{slide.description}</p>
+                <h1 className="text-2xl md:text-3xl lg:text-5xl 2xl:text-6xl font-semibold">{slide.title}</h1>
+                <h2 className=" pb-8 text-gray-800 text-lg md:text-xl lg:text-2xl 2xl:text-4xl">{slide.content}</h2>
+                <p className="text-md text-gray-700 lg:text-lg 2xl:text-xl">{slide.description}</p>
               </div>
             </div>  
             ))}
