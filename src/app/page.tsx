@@ -2,6 +2,7 @@
 import Slider from "@/components/Slider";
 import OurServices from "@/components/OurServices";
 import AboutUs from "@/components/AboutUs";
+import OurValue from "@/components/OurValue";
 
 
 export default function Home() {
@@ -16,6 +17,10 @@ export default function Home() {
 
       {/*Section 3 - About Us */}
       <AboutUs/>
+
+      {/* Section 4 - our  value */}
+      <OurValue/>
+
     </div>
   );
 }

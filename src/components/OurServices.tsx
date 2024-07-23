@@ -37,9 +37,9 @@ const OurServices = () => {
             <h2 className='text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold border-b border-b-red-600 pb-1 text-gray-800'>Services</h2>
         </div>
         <div className="w-full flex flex-col md:flex-row ">
-          {services.map((service, i) => (
+          {services.map((service) => (
            
-              <div key={i} className='w-full flex flex-col md:flex-row gap-4 '>
+              <div key={service.id} className='w-full flex flex-col md:flex-row gap-4 '>
                 <div className='w-full md:w-3/4 mx-auto text-justify '>
                   <h3 className='text-xl md:text-lg font-semibold text-gray-600 py-4'>{service.title}</h3>
                   <Image width={100} height={100}  src={service.image} alt='' className='w-full object-cover rounded-md' />
@@ -48,9 +48,7 @@ const OurServices = () => {
                     <Link href={service.url} className='text-red-600 hover:text-white hover:bg-red-600 transition-all ease-linear duration-150 text-xs border rounded-md border-red-500 px-3 py-1'>Selengkapnya</Link>
                   </div>
                 </div>
-                
               </div>
-            
           ))}
         </div>
     </div>
