@@ -1,12 +1,14 @@
 "use client"
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react"
 
 const MobileMenu = () => {
 
 
     const [isOpen, setIsOpen] = useState(false);
+    const pathname = usePathname();
 
   return (
     <div className="block md:hidden ">
@@ -17,12 +19,13 @@ const MobileMenu = () => {
       </div>
 
      
-        <div className={`${isOpen ? "fixed z-20 top-[80px] left-0 transition-all duration-300 ease-linear bg-white w-full h-[calc(100vh-80px)] " : "left-[-100%] opacity-0"} `}>
+        <div className={`${isOpen ? "fixed z-20 top-[80px] left-0 transition-all duration-200 ease-linear bg-red-600 border-t-2 border-t-yellow-600 w-full h-[40vh] " : "h-0 opacity-0"} `}>
           {isOpen && (
-           <div onClick={() => setIsOpen(false)} className="flex flex-col font-semibold gap-12 items-center justify-center text-md  text-red-600 h-full">
-            <Link href="/">Home</Link>
-            <Link href="/about">About</Link>
-            <Link href="/contact">Contact</Link>
+           <div className={`${isOpen ? "opacity-100 visible" : "opacity-0 hidden"} transition-all duration-500 ease-linear flex flex-col font-semibold gap-4 items-start px-4 justify-center text-md  text-white h-full`}>
+            <Link className={`${pathname === "/" ? "text-yellow-500" : "text-white"}`} onClick={() => setIsOpen(false)} href="/">Home</Link>
+            <Link className={`${pathname === "/about" ? "text-yellow-500" : "text-white"}`} onClick={() => setIsOpen(false)} href="/about">About</Link>
+            <Link className={`${pathname === "/services" ? "text-yellow-500" : "text-white"}`} onClick={() => setIsOpen(false)} href="/services">Services</Link>
+            <Link className={`${pathname === "/contact" ? "text-yellow-500" : "text-white"}`} onClick={() => setIsOpen(false)} href="/contact">Contact</Link>
            </div>
           )}
       </div>
