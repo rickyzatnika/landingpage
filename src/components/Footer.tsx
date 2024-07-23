@@ -1,10 +1,9 @@
 
-import { ImFacebook2 } from "react-icons/im";
-import { GrInstagram } from "react-icons/gr";
-import { FaTiktok, FaPhoneSquareAlt } from "react-icons/fa";
+
+import Link from "next/link";
+import {  FaPhoneSquareAlt } from "react-icons/fa";
 import { AiOutlineMail } from "react-icons/ai";
 import { BiSolidMap } from "react-icons/bi";
-import Link from "next/link";
 
 const Footer = () => {
   return (
