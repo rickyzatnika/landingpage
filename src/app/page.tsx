@@ -3,10 +3,12 @@
 import Script from "next/script";
 
 import Slider from "@/components/Slider";
+import OurServices from "@/components/OurServices";
 
 export default function Home() {
   return (
     <div>
+      {/* Livechat Script */}
       <Script
         id=""
         type="text/javascript"
@@ -25,8 +27,13 @@ export default function Home() {
             `,
         }}
       />
-      
+        {/*Livechat script End  */}
+
+      {/*Section 1 - Image Carousel  */}
       <Slider/>
+
+      {/*Section 2 - Our Services*/}
+      <OurServices/>
     </div>
   );
 }
