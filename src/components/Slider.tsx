@@ -56,10 +56,9 @@ const Slider = () => {
                 <Image src={slide.image} alt="" fill sizes="100%" className="object-cover" />
               </div>
               {/* TEXT CONTAINER */}
-              <div className="text-center py-4 px-4 md:px-6 m-auto absolute left-0 top-0 bottom-0 right-0 z-10 bg-gradient-to-t from-white/90 to-white/10 flex flex-col items-center justify-center gap-2 lg:gap-6 xl:gap-8">
-                <h1 className="text-2xl md:text-3xl lg:text-5xl 2xl:text-6xl font-semibold">{slide.title}</h1>
-                <h2 className=" pb-8 text-gray-800 text-lg md:text-xl lg:text-2xl 2xl:text-4xl">{slide.content}</h2>
-                <p className="text-md text-gray-700 lg:text-lg 2xl:text-xl">{slide.description}</p>
+              <div className="text-center  py-2 px-4 md:px-6 m-auto absolute left-0 top-0 bottom-0 right-0 z-10 bg-gradient-to-t from-white/90 to-white/10 flex flex-col items-center justify-center gap-2 lg:gap-4 xl:gap-6">     
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl 2xl:text-7xl font-semibold">{slide.title}</h1>
+                <h2 className="  text-gray-800 text-xl sm:text-2xl lg:text-3xl 2xl:text-4xl">{slide.content}</h2>       
               </div>
             </div>  
             ))}
