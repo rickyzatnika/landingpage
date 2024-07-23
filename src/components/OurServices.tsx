@@ -45,7 +45,7 @@ const OurServices = () => {
                   <Image width={100} height={100}  src={service.image} alt='' className='w-full object-cover rounded-md' />
                   <div className='py-8'> 
                     <p className='text-gray-500 text-sm  pb-3'>{service.desc}</p>
-                    <Link href={service.url} className='text-red-600 hover:text-red-800'>Selengkapnya</Link>
+                    <Link href={service.url} className='text-red-600 hover:text-white hover:bg-red-600 transition-all ease-linear duration-150 text-xs border rounded-md border-red-500 px-3 py-1'>Selengkapnya</Link>
                   </div>
                 </div>
                 

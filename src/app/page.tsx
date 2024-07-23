@@ -4,6 +4,7 @@ import Script from "next/script";
 
 import Slider from "@/components/Slider";
 import OurServices from "@/components/OurServices";
+import AboutUs from "@/components/AboutUs";
 
 export default function Home() {
   return (
@@ -34,6 +35,9 @@ export default function Home() {
 
       {/*Section 2 - Our Services*/}
       <OurServices/>
+
+      {/*Section 3 - About Us */}
+      <AboutUs/>
     </div>
   );
 }
