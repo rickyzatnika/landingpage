@@ -2,16 +2,16 @@ import Contact from "../../../models/contact";
 import connect from "../../../utils/db";
 import { NextRequest, NextResponse } from "next/server";
 
-export async function GET() {
-  await connect();
+// export async function GET() {
+//   await connect();
 
-  try {
-    const contact = await Contact.find({});
-    return new NextResponse(JSON.stringify(contact), { status: 200 });
-  } catch (error) {
-    return new NextResponse(JSON.stringify(error.message), { status: 500 });
-  }
-}
+//   try {
+//     const contact = await Contact.find({});
+//     return new NextResponse(JSON.stringify(contact), { status: 200 });
+//   } catch (error) {
+//     return new NextResponse(JSON.stringify(error.message), { status: 500 });
+//   }
+// }
 
 export async function POST(req = NextRequest) {
   await connect();
