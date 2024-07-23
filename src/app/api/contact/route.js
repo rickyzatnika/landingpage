@@ -2,7 +2,7 @@ import Contact from "../../../models/contact";
 import connect from "../../../utils/db";
 import { NextRequest, NextResponse } from "next/server";
 
-export async function GET(req = NextRequest) {
+export async function GET() {
   await connect();
 
   try {
