@@ -20,8 +20,8 @@ export async function POST(request: Request) {
     const body = await request.json();
     const newContact = await Contact.create(body);
 
-    return NextResponse.json({newContact});
+    return new NextResponse(JSON.stringify(newContact));
   } catch (error) {
-    return NextResponse.json(error);
+    return new NextResponse(JSON.stringify(error));
   }
 }
