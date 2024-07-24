@@ -22,9 +22,7 @@ const OurServices = () => {
       setIsLoading(true);
 
       try {
-        const response = await fetch(
-          `${process.env.NEXT_PUBLIC_PRO}/api/services`
-        );
+        const response = await fetch("/api/services");
         if (!response.ok) {
           throw new Error("Failed to fetch services");
         }
