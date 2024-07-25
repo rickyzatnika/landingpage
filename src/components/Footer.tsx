@@ -8,7 +8,7 @@ const Footer = () => {
     <div className="w-full relative z-10 flex flex-col  items-center justify-between ">
       <div className="w-full flex flex-col md:flex-row  gap-8 bg-slate-50 px-4 md:px-12 xl:px-16 2xl:px-20 py-14">
         <div className="flex flex-col flex-1">
-          <Link className="text-2xl text-[#d2ee7f]" href="/">
+          <Link className="text-2xl text-gray-600" href="/">
             Logo
           </Link>
           {/* <Image src="/logo.png" alt='logo_aplus' width={100} height={100} className='object-cover ' /> */}
@@ -19,7 +19,7 @@ const Footer = () => {
         </div>
 
         <div className="flex flex-1 flex-col gap-4">
-          <span className=" text-[#d2ee7f] font-semibold mb-2">Support</span>
+          <span className=" text-gray-600 font-semibold mb-2">Support</span>
 
           <div className="flex gap-2 items-center text-gray-400 text-sm">
             <FaPhoneSquareAlt size={20} />
@@ -37,7 +37,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="flex flex-1 flex-col gap-3">
-          <span className=" text-[#d2ee7f] font-semibold">Company</span>
+          <span className=" text-gray-600 font-semibold">Company</span>
           <Link href="/about" className="text-gray-400 text-sm">
             About
           </Link>
@@ -56,7 +56,7 @@ const Footer = () => {
           </Link>
         </div>
         <div className="flex flex-col gap-3 w-full">
-          <span className="text-[#d2ee7f] font-semibold">Connect</span>
+          <span className="text-gray-600 font-semibold">Connect</span>
           <form className="flex flex-col md:flex-row w-full md:w-72">
             <input
               required
@@ -65,7 +65,7 @@ const Footer = () => {
               placeholder="Masukkan Email"
             />
             <button
-              className="bg-[#d2ee7f] hover:bg-[#c2e45e] text-gray-800 shadow rounded-md py-1 px-4  text-sm "
+              className="bg-[#d2ee7f] hover:bg-[#c2e45e] text-gray-800 shadow rounded-md py-2 px-4  text-sm "
               type="submit"
             >
               Kirim
