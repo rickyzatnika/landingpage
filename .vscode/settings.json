@@ -1,0 +1,9 @@
+{
+    "editor.fontVariations": false,
+    "editor.fontFamily": "Ubuntu Mono",
+    "editor.fontLigatures": true,
+    "editor.fontWeight": "400",
+    "workbench.preferredHighContrastLightColorTheme": "Mud Contrast (rainglow)",
+    "workbench.preferredLightColorTheme": "Pastel Contrast (rainglow)",
+    "screencastMode.fontSize": 46
+}

@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+::selection {
+  @apply bg-[#d2ee7f];
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: #d2ee7f;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-gradient-to-r from-[#ccff32] to-[#d2ee7] rounded-t-full rounded-b-full;
+}
