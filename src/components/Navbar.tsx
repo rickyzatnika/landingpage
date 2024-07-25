@@ -16,7 +16,7 @@ const Navbar = () => {
         <Link
           className={`${
             pathname === "/"
-              ? "text-[#a8ca41]  font-semibold"
+              ? "text-[#a8ca41]  "
               : "text-gray-400/60 hover:text-[#a8ca41]"
           }  `}
           href="/"
@@ -26,7 +26,7 @@ const Navbar = () => {
         <Link
           className={`${
             pathname === "/about"
-              ? "text-[#a8ca41] font-semibold"
+              ? "text-[#a8ca41] "
               : "text-gray-400/60 hover:text-[#a8ca41]"
           }`}
           href="/about"
@@ -36,7 +36,7 @@ const Navbar = () => {
         <Link
           className={`${
             pathname === "/services"
-              ? "text-[#a8ca41] font-semibold"
+              ? "text-[#a8ca41] "
               : "text-gray-400/60 hover:text-[#a8ca41]"
           }`}
           href="/services"
@@ -46,7 +46,7 @@ const Navbar = () => {
         <Link
           className={`${
             pathname === "/contact"
-              ? "text-[#a8ca41] font-semibold"
+              ? "text-[#a8ca41] "
               : "text-gray-400/60 hover:text-[#a8ca41]"
           }`}
           href="/contact"

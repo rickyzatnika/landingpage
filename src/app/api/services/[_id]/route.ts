@@ -2,12 +2,12 @@ import { NextResponse } from "next/server";
 import Services from "../../../../models/service"
 import connect from "../../../../utils/db"
 
-async function getServiceById(id: string) {
+async function getServiceById(_id: string) {
 
     await connect();
 
      try {
-    const service = await Services.findById(id);
+    const service = await Services.findById(_id);
     return service;
 
   } catch (error) {
@@ -16,9 +16,9 @@ async function getServiceById(id: string) {
 }
 
 
-export async function GET(req: Request, {params}: {params: {id: string}}){
+export async function GET(req: Request, {params}: {params: {_id: string}}){
     try {
-        const id = params.id
+        const id = params._id
         const services = await getServiceById(id);
 
         return NextResponse.json({services});

@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 interface SServices {
   _id: string;
@@ -11,10 +12,11 @@ interface SServices {
   image: string;
 }
 
-const OurServices = () => {
+const OurServ = () => {
   const [services, setServices] = useState<SServices[]>();
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const pathname = usePathname();
 
   useEffect(() => {
     const fetchServices = async () => {
@@ -40,8 +42,14 @@ const OurServices = () => {
   }, []);
 
   return (
-    <div className="w-full py-8 px-4 md:px-12 xl:px-16 2xl:px-20">
-      <div className="flex gap-1 md:gap-3 py-6 md:py-10 ">
+    <div className="w-full h-full py-16 px-2 md:px-12 xl:px-16 2xl:px-20">
+      <div
+        className={`${
+          pathname === "/services"
+            ? "hidden"
+            : "flex gap-1 md:gap-3 py-6 md:py-10 "
+        }`}
+      >
         <h1 className="text-xl lg:text-2xl xl:text-3xl font-bold text-[#d2ee7f]">
           Our
         </h1>
@@ -49,7 +57,10 @@ const OurServices = () => {
           Services
         </h2>
       </div>
-      {error && <p className="text-[#d2ee7f] py-8">{error}</p>}
+      {error && <p className="text-[#d2ee7f] py-8 text-center">{error}</p>}
+      {services?.length === 0 && (
+        <p className="text-[#d2ee7f] py-8 text-center">Data not found ..</p>
+      )}
       {isLoading ? (
         <p className="text-md text-gray-600">Loading data ...</p>
       ) : (
@@ -61,13 +72,13 @@ const OurServices = () => {
             >
               <div className="w-full md:w-3/4 mx-auto text-justify ">
                 <Image
-                  width={500}
-                  height={500}
+                  width={384}
+                  height={384}
                   quality={80}
                   priority={true}
                   src={service?.image}
                   alt=""
-                  className="w-full object-cover rounded-md"
+                  className="w-96 h-96 object-cover rounded-md"
                 />
                 <h3 className="text-lg md:text-xl  text-gray-500 pt-5">
                   {service?.title}
@@ -90,4 +101,4 @@ const OurServices = () => {
   );
 };
 
-export default OurServices;
+export default OurServ;
